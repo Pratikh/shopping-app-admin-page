@@ -11,7 +11,6 @@ const ProductsTiles = (props) => {
     const [modalShow, setModalShow] = useState(false);
 
     const products = useSelector(state => state.products);
-    console.log(products);
     const onDeleteClick = async (id) => {
         dispatch(deleteProductAction(id));
         const res = await deletProduct(id);
@@ -39,12 +38,12 @@ const ProductsTiles = (props) => {
                          </Card.Text>
                     </div>
                     <div className='bottomButtons'>
-                        <Button variant="danger" onClick={onDeleteClick.bind({}, id)} >Delete</Button>
                         <EditProduct
                             show={modalShow}
                             onHide={() => setModalShow(false)}
                             productid={id}
                         />
+                        <Button variant="danger" onClick={onDeleteClick.bind({}, id)} >Delete</Button>
                     </div>
                 </Card.Body>
             </Card>

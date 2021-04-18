@@ -68,12 +68,10 @@ function MyVerticallyCenteredModal(props) {
     }
     const [validated, setValidated] = useState(false);
     const handleSubmit = (event) => {
-        console.log('skonfsoifios');
         const form = event.currentTarget;
         event.preventDefault();
         event.stopPropagation();
         if (form.checkValidity() === false) {
-            console.log('in false');
         } else {
             saveData();
         }

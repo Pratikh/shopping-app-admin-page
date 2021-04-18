@@ -2,7 +2,6 @@ import './NavigationBar.scss';
 import AddNewProduct from './AddNewProduct'
 
 function NavigationBar() {
-  console.log(AddNewProduct);
   return (
     <nav>
         <ul className="navigationBar">

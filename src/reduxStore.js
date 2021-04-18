@@ -58,12 +58,10 @@ const updateProduct = (products, payload) => {
             copyData[index] = payload;
         }
     })
-    console.log(copyData);
     return copyData;
 }
 
 const reducer = (state = initialState, { type, payload }) => {
-    console.log(payload);
     switch (type) {
         case LOAD_PRODUCT:
             return {

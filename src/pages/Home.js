@@ -10,7 +10,6 @@ const Home = () => {
     const dispatch = useDispatch();
     const getProducts = async () => {
         const data = await getProduct();
-        console.log(data);
         dispatch(loadProductsActions(data.data));
         setLoading(false)
     }
