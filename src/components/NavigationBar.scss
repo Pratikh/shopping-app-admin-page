@@ -1,0 +1,31 @@
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  background-color: beige;
+}
+
+.navigationBar {
+    margin: 0px;
+   display: flex;
+   list-style: none;
+   background-color: beige;
+   list-style: none;
+   flex-direction: column;
+
+   a {
+     transition: background-color 0.5s ease;
+     padding: 10px;
+     cursor: pointer;
+     &:hover{
+       background-color: bisque;
+     }
+     text-decoration: none;
+   }
+
+
+   @media (min-width: 768px) {
+     flex-direction: row;
+  }
+}

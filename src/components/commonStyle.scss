@@ -1,0 +1,9 @@
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .bottomButtons {
+        display: flex;
+    justify-content: space-between;
+    }
+}
