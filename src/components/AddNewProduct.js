@@ -15,9 +15,11 @@ function AddNewProduct(props) {
 
     return (
         <>
-            <Button variant="primary" onClick={() => setModalShow(true)}>
+            <Button
+                variant="primary"
+                onClick={() => setModalShow(true)}>
                 Add new product
-        </Button>
+            </Button>
             <MyVerticallyCenteredModal
                 productid={props.productid}
                 show={modalShow}
@@ -70,7 +72,7 @@ function MyVerticallyCenteredModal(props) {
         event.preventDefault();
         event.stopPropagation();
         if (form.checkValidity() === false) {
-        }else{
+        } else {
             saveData();
         }
         setValidated(true);
@@ -100,32 +102,32 @@ function MyVerticallyCenteredModal(props) {
                         <Form.Label>Product title</Form.Label>
                         <Form.Control required type="text" value={title} onChange={onTitleChange} />
                         <Form.Control.Feedback type="invalid">
-                        Please provide Product title
+                            Please provide Product title
                         </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group controlId="exampleForm.ControlInput1">
                         <Form.Label>Product image URL</Form.Label>
                         <Form.Control required type="text" onChange={onImageChange} value={image} />
                         <Form.Control.Feedback type="invalid">
-                        Please provide image URL
+                            Please provide image URL
                         </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group controlId="exampleForm.ControlTextarea1">
                         <Form.Label>Product Discription</Form.Label>
                         <Form.Control required as="textarea" rows={3} onChange={onDescriptionChange} value={description} />
                         <Form.Control.Feedback type="invalid">
-                        Please give detailed Product Discription
+                            Please give detailed Product Discription
                         </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group controlId="exampleForm.ControlInput1">
                         <Form.Label>Product Price</Form.Label>
                         <Form.Control required type="number" onChange={onPriceChange} value={price} />
                         <Form.Control.Feedback type="invalid">
-                           Please assign Product price.
+                            Please assign Product price.
                         </Form.Control.Feedback>
                     </Form.Group>
-                <Button type="submit" variant="success">Save</Button>
-                <Button onClick={props.onHide} variant="danger">Close</Button>
+                    <Button type="submit" variant="success">Save</Button>
+                    <Button onClick={props.onHide} variant="danger">Close</Button>
                 </Form>
             </Modal.Body>
         </Modal>

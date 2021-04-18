@@ -13,9 +13,11 @@ function EditProduct(props) {
 
     return (
         <>
-            <Button variant="primary" onClick={() => setModalShow(true)}>
+            <Button
+                variant="primary"
+                onClick={() => setModalShow(true)}>
                 Edit
-        </Button>
+             </Button>
             <MyVerticallyCenteredModal
                 productid={props.productid}
                 show={modalShow}
@@ -87,7 +89,7 @@ function MyVerticallyCenteredModal(props) {
             <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">
                     Edit product details
-        </Modal.Title>
+                  </Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>

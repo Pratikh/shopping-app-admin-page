@@ -16,22 +16,23 @@ const Home = () => {
     }
     useEffect(() => {
         getProducts();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     const Component = () => {
         return (
-        <>
-            <NavigationBar />
-            <div className='productsParent'>
-                <ProductsTiles />
-            </div>
-        </>
+            <>
+                <NavigationBar />
+                <div className='productsParent'>
+                    <ProductsTiles />
+                </div>
+            </>
+        )
+    }
+    return (
+        <div>
+            { loading ? <h3>Loading Please wait....</h3> : <Component />}
+        </div>
     )
-        }
-return (
-    <div>
-        { loading ? <h3>Loading Please wait....</h3>:<Component />}
-    </div>
-)
 }
 
 export default Home;
