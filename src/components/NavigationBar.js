@@ -3,7 +3,10 @@ import AddNewProduct from './AddNewProduct'
 
 function NavigationBar() {
   return (
-    <nav>
+    <nav style={{
+      display: "flex",
+    }}>
+        <h2>ShopBridge</h2>
         <ul className="navigationBar">
           <AddNewProduct />
         </ul>

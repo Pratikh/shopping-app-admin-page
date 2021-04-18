@@ -61,12 +61,21 @@ const updateProduct = (products, payload) => {
     return copyData;
 }
 
+const checkAndAddData = (list, payload) => {
+    // This code is written to avoid duplicate data with same id 
+    const mergeData = [...list, ...payload];
+    const data = [...new Map(mergeData.map(item =>
+        [+item.id, item])).values()];
+    return data;
+}
+
+
 const reducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case LOAD_PRODUCT:
             return {
                 ...state,
-                products: [...state.products, ...payload]
+                products: checkAndAddData(state.products, payload)
             }
         case UPDATE_PRODUCT:
             return {
