@@ -1,6 +1,6 @@
 # ShopBridge
 
-This is application to demo shopping app inventory management page where admin can manage products. This uses https://fakestoreapi.com dummy api.
+This is application to demo shopping app inventory management page where admin can manage products. This uses https://fakestoreapi.com dummy api. Here is the demo link https://pratikh.github.io/shopping-app-admin-page/
 
 Below are some of features provided by this app.
 
